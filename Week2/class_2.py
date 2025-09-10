@@ -12,9 +12,6 @@
 
 print("Hello World")
 
-def main():
-    print("Hello CS 5001 pioneers!")
-main()
 
 # white space matters in Python
 # "Don \' paninc" = Don't panic or 'Don \" panic"
@@ -39,8 +36,81 @@ print("""Aread and population of cities
       \tTokyo\t847 million\t220 sq miles
       \tBeijing\t9210 million\t690 sq miles""")
 
-# In python, variables are dynamic, that means they come into existence when they are assigned to values. 
-# In Jave, variables are declaritive, that means we need to 
+# In python, variables are dynamic, that means they come into existence when they are assigned to values, and we can add other type elements into it. 
+# In Java, variables are static, that means we need to declare the type of one variable and we can not add other types freely. 
+
+# Built-in data types:
+#   Numeric: 
+#       Integers(任何整数), 
+#       Float（任何带有Decimal的数字), 
+#       Complex(Imaginary Numbers)
+#   Booleans: 
+#       True or False
+#   Sequential types: 
+#       string(immutable) 
+#       list(mutable): sequences of arbitrary objects
+#       tuple(immutable): fixed length sequences of arbitrary objects
+#       bytes(immutable): sequences of bytes
+#       bytearray(mutable), sequences of bytes
+#   Sets and mappings:
+#       set(mutable): unordered collections of non-duplicated values
+#       frozenset(immutable): unordered collections of values
+#       dictionary(mutable): Mapping from one set of values(keys) to another
+
+# String IO (Input/Output)
+print("I'm a string") # To print a string to the standard output(a terminal)
+my_string = input("Please type a string: ") # To read a string in from the standard input(a terminal command line)
+print(f"You typed the string: '{my_string}'")
+
+# >>> is a REPL(Read, Evaluate, Print, Loop)
+
+# Arithmetic operations
+#   +
+#   -
+#   *
+#   \ (The result is always a float, if we use \\, it will be the int)
+#   \\ Floor Division
+#   % Get the remainder / Moduler
+#   ** 
+def main():
+    num1 = float(input("Please input a number: ")) # This is the example why Python is dynamic
+    num2 = float(input("Please input another number: "))
+    print(f"The sum of {num1} and {num2} is {num1 + num2}")
+main()
+
+# def main2():
+#     num1 = input("Please input a number: ")
+#     num2 = input("Please input another number: ")
+#     print(f"The sum of {num1} and {num2} is {float(num1) + float(num2)}")
+# main2()
+
+# Avoid using magic numbers in the code
+def temp_converstion():
+    BASE = 32
+    CONVERSION_FACTOR = 5.0 / 9.0
+    TEMP_PERCISION = 2 # In python, we use all cap letters to represent constants. 
+
+    fahrenheit_temp = float(input("Input a temperature in Fahrenheit: "))
+    celsius_temp = (fahrenheit_temp - BASE) * CONVERSION_FACTOR
+    print(f"Result: {round(celsius_temp, TEMP_PERCISION)} degrees celsius")
+temp_converstion()
+
+
+# def quadratic_formula():
+#     PRECISION = 3
+#     a = float(input("Please input the coefficient of the x squared: "))
+#     b = float(input("Enter the coefficient of x: "))
+#     c = float(input("Enter the constant: ")) # nameing variables using a, b, c is not bad because the formula is universal. 
+
+#     TWO = 2
+#     FOUR = 4
+#     discriminant = b ** TWO - (FOUR * a * c)
+#     root1 = ((-b) + sqrt(discriminant)) / (TWO * a)
+#     root2 = ((-b) - sqrt(discriminant)) / (TWO * a)
+
+#     print("Root #1: ", round(root1, PRECISION))
+#     print("Root #2: ", round(root2, PRECISION))
+# quadratic_formula()
 
 
 
